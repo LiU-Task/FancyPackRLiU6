@@ -1,0 +1,14 @@
+Package: FancyPackRLiU6
+Type: Package
+Title: Knapsack
+Version: 1.0
+Date: 2019-10-09
+Author: Jun Li
+Maintainer: Jun Li <junli559@student.liu.se>
+Description: Solve a test Knapsack problem
+License: GPL-3
+Encoding: UTF-8
+Suggests: 
+    testthat
+Imports:
+
