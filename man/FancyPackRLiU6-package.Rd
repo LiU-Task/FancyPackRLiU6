@@ -13,8 +13,10 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{FancyPackRLiU6}
 \packageIndices{FancyPackRLiU6}
-~~ An overview of how to use the package, including the most important ~~
-~~ functions ~~
+The package presents three typical ways of resolving Knapsack problem, with brutal force, dynamic programing and approximate solutions. By means of exploring different computing complexities, a better understanding of fast code has been reached.
+brute_force_knapsack(x,W)
+knapsack_dynamic(x,W)
+greedy_knapsack(x,W)
 }
 \author{
 \packageAuthor{FancyPackRLiU6}
@@ -22,15 +24,21 @@ The DESCRIPTION file:
 Maintainer: \packageMaintainer{FancyPackRLiU6}
 }
 \references{
-~~ Literature or other references for background information ~~
+https://en.wikipedia.org/wiki/Knapsack_problem
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the ~~
-~~ R documentation directory ~~
+
 \keyword{ package }
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+
+
 }
 \examples{
-~~ simple examples of the most important functions ~~
+set.seed(42)
+n<- 2000
+knapsack_objects<-data.frame(
+    w=sample(1:4000, size = n, replace = TRUE),
+    v=runif(n = n, 0, 10000))
+system.time(brute_force_knapsack(x = knapsack_objects[1:16,], W = 3500))[2]
+system.time(knapsack_dynamic(x = knapsack_objects[1:500,], W = 3500))[2]
+
 }

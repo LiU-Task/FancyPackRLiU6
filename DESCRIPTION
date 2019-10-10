@@ -5,10 +5,15 @@ Version: 1.0
 Date: 2019-10-09
 Author: Jun Li
 Maintainer: Jun Li <junli559@student.liu.se>
-Description: Solve a test Knapsack problem
+Description: Solve a test Knapsack problem with different coding methods
 License: GPL-3
 Encoding: UTF-8
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown,
+    binaryLogic
 Imports:
-
+    binaryLogic
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr
