@@ -12,8 +12,10 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    binaryLogic
+    binaryLogic,
+    Rcpp
 Imports:
-    binaryLogic
+    binaryLogic,
+    Rcpp
 RoxygenNote: 6.1.1
 VignetteBuilder: knitr

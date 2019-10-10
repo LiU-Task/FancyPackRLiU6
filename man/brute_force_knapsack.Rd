@@ -4,12 +4,14 @@
 \alias{brute_force_knapsack}
 \title{brute_force_knapsack}
 \usage{
-brute_force_knapsack(x, W)
+brute_force_knapsack(x, W, fast = FALSE)
 }
 \arguments{
 \item{x, }{a data frame of items with different values and weights}
 
 \item{W, }{the capacity of knapsack}
+
+\item{fast, }{logical signal when Rcpp function activated}
 }
 \value{
 a list with best value and selected elements
@@ -19,7 +21,7 @@ Given data frame \code{x}, max weight \code{W}, give the best solution with brut
 }
 \examples{
 set.seed(42)
-n<- 1000000
+n<- 2000
 knapsack_objects <-data.frame(
  w=sample(1:4000, size = n, replace = TRUE),
  v=runif(n = n, 0, 10000))
